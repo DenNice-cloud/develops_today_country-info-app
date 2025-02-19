@@ -9,7 +9,7 @@ const CountryDetail = () => {
   const [countryInfo, setCountryInfo] = useState<CountryInfo | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const API_INFO = "http://localhost:3000/info";
+  const API_INFO = import.meta.env.VITE_API_INFO;
 
   useEffect(() => {
     setCountryInfo(null);

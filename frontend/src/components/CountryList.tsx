@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { CountryResponse } from "../types/type";
-
-
+import { CountryShortInfo } from "./CountryShortInfo";
 
 const CountryList = () => {
   const [countries, setCountries] = useState<CountryResponse[]>([]);
-  const API_URL = "http://localhost:3000/";
+  const API_URL = import.meta.env.VITE_MAIN_API;
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -33,12 +31,7 @@ const CountryList = () => {
             key={country.countryCode}
             className="border p-4 rounded-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-center"
           >
-            <Link
-              to={`/country/${country.countryCode}`}
-              className="block text-xl font-semibold text-blue-600 hover:underline "
-            >
-              {country.name}
-            </Link>
+            <CountryShortInfo country={country} />
           </div>
         ))}
       </div>
