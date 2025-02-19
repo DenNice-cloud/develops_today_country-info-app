@@ -18,6 +18,7 @@ git clone https://github.com/DenNice-cloud/develops_today_country-info-app.git
 ```
 
 **Backend Setup**
+
 Navigate to the backend directory:
 ```
 cd backend
@@ -29,6 +30,7 @@ npm install
 ```
 
 2. **Frontend Setup**
+
 Navigate to the frontend directory:
 ```
 cd frontend
@@ -40,7 +42,9 @@ npm install
 ```
 
 3. **Running the Application**
+
 **Backend**
+
 To start the backend server:
 ```
 npm run dev
@@ -48,6 +52,7 @@ npm run dev
 The backend will be available at http://localhost:3000.
 
 **Frontend**
+
 To start the frontend application:
 ```
 npm run dev
